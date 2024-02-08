@@ -78,5 +78,7 @@ public class Account {
 		System.out.println(name + "의 현재 잔액 :" + balance);
 		
 	}
+	
+	
 
 }

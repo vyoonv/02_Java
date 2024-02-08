@@ -70,23 +70,24 @@ public class ArrayExample1 {
 		
 	}
 	
-	public void ex2() {
-		//배열 선언 및 할당
-		int[] arr = new int [4]; 
+		public void ex2() {
 		
-		arr[0] = 100; 
-		arr[1] = 200; 
-		arr[2] = 500; 
-		arr[3] = 1000;
-		
-		//배열의 길이(몇 칸인가) : 배열명.length
-		System.out.println("배열의 길이 : " + arr.length);
-		
-		//배열과 for문
-		for(int i=0; i < arr.length; i++ ) { //4 
-			// 0 1 2 3 
-			System.out.printf("arr[%d]에 저장된 값 : %d\n", i, arr[i]);
-		}
+			// 배열 선언 및 할당
+			int[] arr = new int[4];
+			
+			arr[0] = 100;
+			arr[1] = 200;
+			arr[2] = 500;
+			arr[3] = 1000;
+			
+			// 배열의 길이 (몇 칸 인가) : 배열명.length
+			System.out.println("배열의 길이 : " + arr.length);
+			
+			// 배열과 for문
+			for(int i=0; i < arr.length; i++) {
+				// 0 1 2 3
+				System.out.printf("arr[%d]에 저장된 값 : %d\n", i, arr[i]);
+			}
 		
 	}
 	
@@ -101,6 +102,7 @@ public class ArrayExample1 {
 			
 			//평균 177.02
 			
+ 			
 			Scanner sc = new Scanner(System.in); 
 			
 			double[] height = new double [5]; 
@@ -124,7 +126,7 @@ public class ArrayExample1 {
 				
 			}
 			
-			System.out.printf("\n평균 : .2%f", sum / height.length);
+			System.out.printf("\n평균 : %.2f", sum / height.length);
 			
 		}
 		
@@ -383,7 +385,43 @@ public class ArrayExample1 {
 			
 		}
 		
+		public void ex10() {
+			int[] arr = new int [4]; 
+			for(int i=0; i< arr.length; i++) {
+				System.out.printf("arr[%d]에 저장된 값 : %d\n", i, arr[i]);
+			}
+		}
 	
-	
+		public void ex11() {
+			Scanner sc = new Scanner(System.in); 
+			System.out.println("입력 받을 인원 수 : " );
+			int input = sc.nextInt(); 
+			
+			int[] score = new int[input];
+			int sum = 0; 
+			for(int i=0; i<score.length; i++) {
+				System.out.println((i+1) + "번 점수 입력 : ");
+				score[i] = sc.nextInt () ;
+				sum += score[i]; 				
+				
+			}
+			int max = score[0]; 
+			int min = score[0]; 
+			
+			for(int i=0; i<score.length; i++) {
+				if( score[i] > max ) {
+					max = score[i]; 
+				}
+				if ( score[i] < min) {
+					min = score[i]; 
+				}
+			}
+			System.out.println("합계 :" + sum);
+			System.out.printf("평균 : %.2f\n", (double)sum / score.length);
+			System.out.println("최고점 : " + max);
+			System.out.println("최저점 : " + min);
+			
+			
+		}
 
 }
