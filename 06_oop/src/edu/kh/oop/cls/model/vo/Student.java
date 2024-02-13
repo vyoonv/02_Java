@@ -10,7 +10,7 @@ public class Student { //클래스 선언부
 	//필드(field) : 객체의 속성을 작성하는 클래스 내부 영역
 	// == 멤버 변수 : 메서드 밖에 작성된 변수 
 	//인스턴스 변수 : 필드에 작성되는 일반 변수 
-	private int age; 
+	//private int age; 
 	//클래스 변수(== static 변수) : 필드에 static 예약어가 작성된 변수 
 	public static String schoolName ; 
 	
@@ -35,7 +35,7 @@ public class Student { //클래스 선언부
 		
 	//접근제한자 예제 
 	public void ex() {
-		TestVO test = new TestVO() ; 
+		//TestVO test = new TestVO() ; 
 		
 		//필드 접근제한자 
 		System.out.println(v1);

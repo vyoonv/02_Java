@@ -1,4 +1,4 @@
-package edu.kh.oop.preactice.model.vo;
+package edu.kh.oop.practice.model.vo;
 
 public class Hero {
 	

@@ -40,7 +40,7 @@ public class ClsService /*extends Student*/ {
 		std1.setName("홍길동");
 		std2.setName("김영희");
 		
-		System.out.println(std1.schoolName1);
+		//System.out.println(std1.schoolName1);
 		// schoolName에 노란줄이 뜨는 이유(경고)
 		//-> 제대로 작성을 안해서 
 		
@@ -50,8 +50,8 @@ public class ClsService /*extends Student*/ {
 		Student.schoolName = "KH정보교육원";
 		
 		System.out.println(Student.schoolName);
-		System.out.println(std1.schoolName);
-		System.out.println(std2.schoolName);
+		//System.out.println(std1.schoolName);
+		//System.out.println(std2.schoolName);
 		
 		/*
 		 * static
