@@ -43,7 +43,26 @@ public class Employee {
 	} 
 	
 	
-	public Employee() {}
+	public Employee() {
+		
+		
+	}
+	
+	public Employee(String emNum, String emName, String dept, String job, int salary) {
+
+		this.emNum = emNum;
+		this.emName = emName;
+		this.dept = dept;
+		this.job = job;
+		this.salary = salary;
+	}
+	
+	public String information() {
+		
+		return "사번 : " + emNum + ", 이름 : " + emName + 
+				", 부서 : " + dept + "직급 : " + job + ", 급여 : " + salary ; 
+		
+	}
 	
 
 	
