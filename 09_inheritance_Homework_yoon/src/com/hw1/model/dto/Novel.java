@@ -1,0 +1,32 @@
+package com.hw1.model.dto;
+
+public class Novel extends Book {
+	
+	public String genre;
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	
+	
+	public Novel(String title, String author, String genre) {
+		super(title, author);
+		this.genre = genre;
+	}
+
+
+	@Override
+	public void displayInfo() {
+		
+		System.out.println("[소설] 제목 : " + getTitle() + " / 저자 : " + getAuthor() + " / 장르 : " + genre );
+		
+	} 
+	
+	public Novel() {}
+	
+
+}
