@@ -15,7 +15,10 @@ public class ToyFactory {
 	Scanner sc = new Scanner(System.in); 
 	
 	
-	
+//	중복 제거 set
+//
+//	재료는 재료번호:재료명 -> map
+
 	
 	
 	
