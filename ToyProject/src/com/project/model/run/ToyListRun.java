@@ -9,6 +9,8 @@ public class ToyListRun {
 		
 		ToyListView toyView = new ToyListView(); 
 		
+		toyView.preView();
+		
 	}
 
 }

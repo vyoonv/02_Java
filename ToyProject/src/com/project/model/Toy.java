@@ -60,7 +60,7 @@ public class Toy implements Serializable {
 	@Override
 	public String toString() {
 
-		return "Toy [toyType : " + toyType + ", name : " + name + ", detail : " + detail + "]" ;
+		return "Toy [toyType : " + toyType + "/ name : " + name + "/ detail : " + detail + "]" ;
 		
 	}
 	
