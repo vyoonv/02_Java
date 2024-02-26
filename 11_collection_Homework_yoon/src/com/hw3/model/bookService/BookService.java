@@ -133,22 +133,22 @@ public class BookService {
 				
 				switch(editMenu) {
 				case 1 : 
-					System.out.println("도서명 입력 : ");
+					System.out.print("도서명 입력 : ");
 					String bTitle = sc.nextLine(); 
 					book.setbTitle(bTitle);
 					break; 
 				case 2 :
-					System.out.println("저자명 입력 : ");
+					System.out.print("저자명 입력 : ");
 					String author = sc.nextLine(); 
 					book.setAuthor(author); 
 					break;
 				case 3 : 
-					System.out.println("가격 입력 : ");
+					System.out.print("가격 입력 : ");
 					int price = sc.nextInt(); 
 					book.setPrice(price);
 					break; 
 				case 4 : 
-					System.out.println("출판사 입력 : ");
+					System.out.print("출판사 입력 : ");
 					String bCom = sc.nextLine(); 
 					book.setbCom(bCom);
 					break; 

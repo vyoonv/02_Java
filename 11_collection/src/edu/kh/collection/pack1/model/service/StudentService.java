@@ -144,16 +144,16 @@ public class StudentService {
 		
 		System.out.println("========= 학생 정보 추가 =========");
 		
-		System.out.println("이름 : ");
+		System.out.print("이름 : ");
 		String name = sc.next(); 
-		System.out.println("나이 : ");
+		System.out.print("나이 : ");
 		int age = sc.nextInt();
 		sc.nextLine();
-		System.out.println("지역 : ");
+		System.out.print("지역 : ");
 		String region = sc.nextLine(); 
-		System.out.println("성별(M/F) : ");
+		System.out.print("성별(M/F) : ");
 		char gender = sc.next().charAt(0);  // 'M' or 'F'
-		System.out.println("점수 : ");
+		System.out.print("점수 : ");
 		int score = sc.nextInt(); 
 		
 		//Student 객체 생성 후 List에 추가 
@@ -259,16 +259,16 @@ public class StudentService {
 			System.out.println(index + "번째에 저장된 학생 정보");
 			System.out.println(studentList.get(index));
 			
-			System.out.println("이름 : ");
+			System.out.print("이름 : ");
 			String name = sc.next(); 
-			System.out.println("나이 : ");
+			System.out.print("나이 : ");
 			int age = sc.nextInt();
 			sc.nextLine();
-			System.out.println("지역 : ");
+			System.out.print("지역 : ");
 			String region = sc.nextLine(); 
-			System.out.println("성별(M/F) : ");
+			System.out.print("성별(M/F) : ");
 			char gender = sc.next().charAt(0); 
-			System.out.println("점수 : ");
+			System.out.print("점수 : ");
 			int score = sc.nextInt(); 
 			
 			// 입력 받은 index 번째에 새로운 학생 정보(입력받은 값)를 세팅 == 수정 
@@ -318,7 +318,7 @@ public class StudentService {
 		} else {
 			
 			//학생 정보 제거 
-			System.out.println("정말 삭제하시겠습니까? (Y/N) : ");
+			System.out.print("정말 삭제하시겠습니까? (Y/N) : ");
 			char ch = sc.next().toUpperCase().charAt(0);
 			//		String 대문자 -> 대문자의 0번째 인덱스 문자를 ch에 저장 
 			// String.toUpperCase() : 문자열을 대문자로 변경 
@@ -397,16 +397,17 @@ public class StudentService {
 				
 				System.out.println(str); 
 				flag = false; }
+		}
 			
-			if(flag) {
-				System.out.println("검색 결과가 없습니다");
-			}
+			
 				
 //			} else {
 //				System.out.println("검색 결과가 없습니다");
 //			}
 //			
-		}
+			if(flag) {
+				System.out.println("검색 결과가 없습니다");
+			}
 		
 		
 		
