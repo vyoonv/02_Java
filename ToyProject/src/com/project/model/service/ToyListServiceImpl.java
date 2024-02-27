@@ -47,13 +47,15 @@ public class ToyListServiceImpl implements ToyListService {
 		}
 
 		@Override
-		public String todoDelete(int index) throws Exception {
+		public String deleteDIYToy(int index) throws Exception {
 			Toy toy = dao.deleteDIYToy(index); 
 			
 			if(toy == null) return null; 
 			
 			return toy.getName();
 		}
+
+
 
 
 

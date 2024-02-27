@@ -18,7 +18,8 @@ public class ToyListView {
 	
 	private BufferedReader br = null; 
 	private ToyListService service = null; 
-//	private List<Toy> toyList = null; 
+	private List<Toy> toyList = new ArrayList<Toy>(); 
+	
 	
 	//기본 생성자 
 	public ToyListView() {
@@ -167,7 +168,9 @@ public class ToyListView {
 		System.out.print("수정할 장난감 이름 입력 : ");
 		String input = br.readLine(); 
 		
-		if(service.displayToyType().containsValue(input)){
+		String toyList = service.displayToyType().toString(); 
+		
+		if(toyList.contains(input)){
 			
 			System.out.print("장난감 종류 수정 입력 : ");
 			String type = br.readLine(); 
@@ -181,24 +184,20 @@ public class ToyListView {
 			
 			while(true) {
 				
-				String content = br.readLine(); 
-				
-				if(content.equals("!zz")) break; 
-				
-				sb.append(content);
-			}
-			boolean result = service.UpdateDIYToy(type, name, sb.toString());
+				String content = br.readLine(); 				
+				if(content.equals("!zz")) break; 				
+				sb.append(content); 		
 			
-			if(result) System.out.println("수정 완료!");
-			else System.out.println("수정 실패!");
-		}
+				
+			}
+		boolean result = service.UpdateDIYToy(type, name, sb.toString());
 		
+		if(result) System.out.println("수정 완료!");
+		else System.out.println("수정 실패!");
 		
+ 
 		
-		
-		
-		
-		
+		}	
 		
 		
 		
@@ -212,7 +211,7 @@ public class ToyListView {
 		System.out.println("삭제할 인덱스 번호 입력 : ");
 		int index = Integer.parseInt(br.readLine()); 
 		
-		String result = service.todoDelete(index); 
+		String result = service.deleteDIYToy(index); 
 		
 		if(result == null) System.out.println("### 인덱스가 존재하지 않습니다 ###");
 		else System.out.printf("[%s] 가 삭제되었습니다\n", result);

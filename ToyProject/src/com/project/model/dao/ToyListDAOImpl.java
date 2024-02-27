@@ -15,7 +15,7 @@ import com.project.model.Toy;
 
 public class ToyListDAOImpl implements ToyListDAO{
 	
-	private final String FILE_PATH = "\\io_test\\ToyList.dat"; 
+	private final String FILE_PATH = "/io_test/ToyList.dat"; 
 
 	private ObjectInputStream ois = null;
 	private ObjectOutputStream oos = null; 
@@ -40,7 +40,7 @@ public class ToyListDAOImpl implements ToyListDAO{
 			
 			
 		} else { 
-			File directory = new File("\\io_test"); 
+			File directory = new File("/io_test"); 
 			if(!directory.exists()) directory.mkdir(); 		
 
 			toyList = new ArrayList<Toy>();
@@ -88,13 +88,6 @@ public class ToyListDAOImpl implements ToyListDAO{
 
 
 	@Override
-	public List<Toy> todoListFullView() {
-		
-		return toyList;
-	}
-
-
-	@Override
 	public List<Toy> displayToyType() {
 		
 		return toyList;
@@ -115,15 +108,15 @@ public class ToyListDAOImpl implements ToyListDAO{
 
 
 	@Override
-	public boolean UpdateDIYToy(String type, String name, String content) throws Exception {
+	public Boolean UpdateDIYToy(String type, String name, String content) throws Exception {
 		
 		Toy toy = new Toy (type, name, content); 
 		
-		if(toyList != null ) {
+		if(toyList.set(0, toy) != null ) {
 			saveFile(); 
 			return true; 
 		}
-		return false;
+		return false; 
 	}
 
 

@@ -13,7 +13,7 @@ public interface ToyListService {
 
 	public abstract boolean UpdateDIYToy(String type, String name, String content) throws Exception;
 
-	public abstract String todoDelete(int index) throws Exception; 
+	public abstract String deleteDIYToy(int index) throws Exception; 
 	
 
 
